@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pocket PT</title>
+</head>
+
+<body>
+    <h1>Home Page</h1>
+    <nav>
+        
+        <a href="/updateinfo">Update Info</a>
+        <a href="/logout">Log Out</a>
+    </nav>
+    <div>
+        <p>
+            <img src="<%=user.image%>" alt="">
+        </p>
+        <p>
+            <%= user.name %>
+        </p>
+        <ul>
+            <li><%= user.info.weight %>lb.</li>
+            <li><%= user.info.age %> </li>
+            
+            <% var inches = user.info.height; %>
+            <% var feet = Math.floor(inches / 12); %>
+            <% inches %= 12; %>
+            
+            <li><%= feet %>'<%= inches %>" </li>
+        </ul>
+            
+        
+        <p>
+            Caloric Intake <%= calIntake %>
+        </p>
+        <p>
+            Caloric Output <%= bmr %>
+        </p>
+        
+    </div>
+
+    <div>
+        <a href="/diets">Recommended Meal Plan</a>
+    </div>
+    <div>
+        <a href="/exercises">Recommended Exercises</a>
+    </div>
+    
+    
+</body>
+
+</html>
