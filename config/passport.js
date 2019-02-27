@@ -16,7 +16,6 @@ passport.use(new GoogleStrategy({
         user.save(function(err) {
           if (err) next(err);
         })
-        console.log('GOOGLE: ', profile);
         return cb(null, user);
       } else {
         // we have a new user via OAuth!

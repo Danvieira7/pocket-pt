@@ -32,6 +32,10 @@ function home(req, res){
   var userInfo = req.user.info;
   var bmr;
   var calIntake;
+  var carb;
+  var prot;
+  var fat;
+
   if(userInfo.gender == 'female'){
     bmr = Math.floor(655.1 + (4.35 * userInfo.weight) 
     + (4.7 * userInfo.height) - (4.7 * userInfo.age));
@@ -43,15 +47,34 @@ function home(req, res){
   switch(userInfo.goal){
     case 'weight loss':
     calIntake = bmr - 500;
+    carb = calIntake * 0.4;
+    prot = calIntake * 0.45;
+    fat = calIntake * 0.15;
     break;
     case 'muscle gain':
     calIntake = bmr + 500;
+    carb = calIntake * 0.4;
+    prot = calIntake * 0.4;
+    fat = calIntake * 0.2;
     break
     default:
     calIntake = bmr;
+    carb = calIntake * 0.5;
+    prot = calIntake * 0.35;
+    fat = calIntake * 0.15;
   }
+
+  
+
   console.log(req.user)
-  res.render('home', {user: req.user, bmr: bmr, calIntake: calIntake});
+  res.render('home', {
+    user: req.user,
+    bmr: bmr, 
+    calIntake: calIntake,
+    carb: carb,
+    prot: prot,
+    fat: fat
+  });
 }
 
 function addInfo(req, res, next){
