@@ -19,7 +19,6 @@ function showDiet(req, res, next){
 function addImage(req, res){
   req.user.image = req.body;
   req.user.save(function(err){
-    console.log('hitting');
     res.redirect('/home');
   })
 }
@@ -64,9 +63,6 @@ function home(req, res){
     fat = calIntake * 0.15;
   }
 
-  
-
-  console.log(req.user)
   res.render('home', {
     user: req.user,
     bmr: bmr, 
@@ -80,7 +76,6 @@ function home(req, res){
 function addInfo(req, res, next){
   req.user.info = req.body;
   req.user.save(function(err){
-    console.log('hitting');
     res.redirect('/home');
   })
 }
@@ -103,7 +98,7 @@ function updateInfo(req, res, next){
     req.body
   }},function(err, doc){
     if(err){
-        console.log("Something wrong when updating data!");
+      console.log("Something wrong when updating data!");
     }
     console.log(doc);
 });
