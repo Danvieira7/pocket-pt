@@ -10,7 +10,7 @@ const R = require('./models/recipe')
 //     console.log(r)
 // })
 
-U.findOne({}).then(function(r) {
+U.findOneAndDelete({}).then(function(r) {
     console.log(r)
 })
 
