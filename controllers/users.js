@@ -58,21 +58,21 @@ function home(req, res){
   switch(userInfo.goal){
     case 'weight loss':
     calIntake = bmr - 500;
-    carb = calIntake * 0.4;
-    prot = calIntake * 0.45;
-    fat = calIntake * 0.15;
+    carb = Math.floor(calIntake * 0.4);
+    prot = Math.floor(calIntake * 0.45);
+    fat = Math.floor(calIntake * 0.15);
     break;
     case 'muscle gain':
     calIntake = bmr + 500;
-    carb = calIntake * 0.4;
-    prot = calIntake * 0.4;
-    fat = calIntake * 0.2;
+    carb = Math.floor(calIntake * 0.4);
+    prot =  Math.floor(calIntake * 0.4);
+    fat = Math.floor(calIntake * 0.2);
     break
     default:
     calIntake = bmr;
-    carb = calIntake * 0.5;
-    prot = calIntake * 0.35;
-    fat = calIntake * 0.15;
+    carb = Math.floor(calIntake * 0.5);
+    prot = Math.floor(calIntake * 0.35);
+    fat = Math.floor(calIntake * 0.15);
   }
 
   res.render('home', {

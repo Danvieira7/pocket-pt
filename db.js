@@ -10,7 +10,7 @@ const R = require('./models/recipe')
 //     console.log(r)
 // })
 
-R.findOne({}).then(function(r) {
+U.findOne({}).then(function(r) {
     console.log(r)
 })
 

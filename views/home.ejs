@@ -2,56 +2,64 @@
 <html lang="en">
 
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pocket PT</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <h1>Home Page</h1>
-    <nav>
-        
-        <a href="/updateinfo">Update Info</a>
-        <a href="/logout">Log Out</a>
-    </nav>
-    <div>
-        <p>
-            <img src="<%=user.image%>" alt="">
-        </p>
-        <p>
-            <%= user.name %>
-        </p>
-        <ul>
-            <li><%= user.info.weight %>lb.</li>
-            <li><%= user.info.age %> </li>
+    <div id="homecontainer">
+        <div id="navbar">
+            <h1 id="h1">Home Page</h1>
+            <nav>
+                <a href="/updateinfo" class="btn btn-warning">Update Info</a>
+                <a href="/diets" class="btn btn-warning">Diet</a>
+                <a href="/exercises" class="btn btn-warning">Exercises</a>
+                <a href="/logout" class="btn btn-warning">Log Out</a>
+            </nav>
+        </div>
+       
+        <div id="profilecontainer">
+            <div id="photoname">
+                <img src="<%=user.image%>" id="profileimg">
+                <h5><%= user.name %></h5>
+            </div>
+            <div id="#list">
             
-            <% var inches = user.info.height; %>
-            <% var feet = Math.floor(inches / 12); %>
-            <% inches %= 12; %>
+                <p>
+                    <% var inches = user.info.height; %>
+                    <% var feet = Math.floor(inches / 12); %>
+                    <% inches %= 12; %>
+                    <%= user.info.weight %>lb | <%= user.info.age %> | <%= feet %>'<%= inches %>" 
+                </p>
+                
+            </div>
+                
             
-            <li><%= feet %>'<%= inches %>" </li>
-        </ul>
+            <div id="calinfo">
+                <p>
+                    Caloric Intake <%= calIntake %>cal | Caloric Output <%= bmr %>cal </br></br>
+                    Macros Caloric Ratio: <br>
+                    Carb: <%= carb %>cal | Prot: <%= prot %>cal | Fats: <%= fat %>cal
+                </p>
+            </div>
             
-        
-        <p>
-            Caloric Intake <%= calIntake %> </br>
-            Macros Caloric Ratio: Carb: <%= carb %> | Prot: <%= prot %> | Fats: <%= fat %>
-        </p>
-        <p>
-            Caloric Output <%= bmr %>
-        </p>
-        
-    </div>
+        </div>
 
-    <div>
-        <a href="/diets">Recommended Meal Plan</a>
-    </div>
-    <div>
-        <a href="/exercises">Recommended Exercises</a>
-    </div>
+        <div>
+            
+        </div>
+        <div>
+        </div>
     
-    
+    </div>
 </body>
 
 </html>

@@ -6,3 +6,102 @@ body {
 a {
   color: #00B7FF;
 }
+#h1, h4, h5{
+  font-family: 'Londrina Shadow', cursive;
+}
+
+#hometitle{
+  font-family: 'Londrina Shadow', cursive;
+  background-color: rgb(255, 198, 78);
+}
+
+
+#exercisecont{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.exercisebox{
+  display: flex;
+
+  height: 100px;
+  width: 400px;
+  background-color: rgb(255, 198, 78);
+  border-radius: 5px;
+}
+#wrapper{
+  display: flex;
+
+}
+
+#profilecontainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  background-color: rgb(255, 198, 78);
+  height: 250px;
+}
+
+#profileimg{
+  border-radius: 50%;
+  border: solid black 2px;
+  height: 75px;
+}
+#dietdisplay{
+  display: flex;
+  flex-direction: row;
+}
+#recipebox{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  background-color: rgb(255, 198, 78);
+  border-radius: 5px;
+}
+#foodimg{
+  border-top: 10px;
+}
+#discrip{
+  height: 85px;
+  width:280px;
+  border: solid black 1px;
+  border-radius: 3px;
+}
+
+#navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color:  rgb(255, 198, 78);
+  align-items: center;
+  margin-bottom: 20px; 
+}
+
+#dietbody{
+  display: flex;  
+  flex-direction: column;
+}
+
+#intro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 300px;
+}
+#container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+#footer{
+  display: flex;
+  justify-content: baseline;
+  text-align: center;
+}
