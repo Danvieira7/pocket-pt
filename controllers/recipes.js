@@ -1,7 +1,5 @@
 const Recipe = require('../models/recipe');
 
-
-
 module.exports = {
     showFlex,
     showKeto,
@@ -9,35 +7,37 @@ module.exports = {
     newFlex,
     newPaleo,
     newKeto,
-    addMeal
+    addMeal,
+    deleteMeal
        
 }
 
+
+function deleteMeal(req, res){
+
+    console.log(req.params.id)
+    Recipe.findByIdAndRemove(req.params.id, function(err, deletedRecipe){
+        res.redirect('/flexDiet')
+    })
+}
+
 function addMeal(req, res, next){
-    // console.log(req.body);
-
-    Recipe.create(req.body, function (err, recipe) {
-
-        if (err) return handleError(err);
+    var recipe = new Recipe(req.body);
+    recipe.image = req.file.url;
+    console.log(req.body);
+    recipe.save(function(err){
         switch(req.body.dietStyle){
             case 'flexible':
-            res.render('flexDiet', {
-                recipe
-            });
+            res.redirect('/flexDiet');
             break;
             case 'keto':
-            res.render('keto', {
-                recipe
-            });
+            res.redirect('/keto');
             break
             case 'paleo':
-            res.render('paleo', {
-                recipe
-            });
+            res.redirect('/paleo');
             break
         }
     });
-
 }
 
 function showFlex(req, res){

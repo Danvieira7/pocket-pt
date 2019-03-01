@@ -9,11 +9,21 @@ module.exports = {
   updateInfo,
   showDiet,
   showExercises,
-  addImage
+  addImage,
+  beginnerT,
+  intermediateT
 };
 
 function showDiet(req, res, next){
   res.render('diets');
+}
+
+function beginnerT(req, res){
+  res.render('beginnerT')
+}
+
+function intermediateT(req, res){
+  res.render('intermediateT')
 }
 
 function addImage(req, res){
@@ -24,7 +34,9 @@ function addImage(req, res){
 }
 
 function showExercises(req, res, next){
-  res.render('exercises');
+  res.render('exercises', {
+    user: req.user
+  });
 }
 
 function home(req, res){

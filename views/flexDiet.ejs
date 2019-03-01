@@ -9,11 +9,17 @@
 <body>
     <h1>Flexible Diet Recipes</h1>
     <div>
-        <h1>
-            
-        </h1>
+        <% recipe.forEach(function(r) { %>
+        <tr>
+            <form method="POST" action="/flexDiet/<%= r._id %>?_method=DELETE">
+                <input type="submit">
+            </form>
+            <td><img src="<%= r.image %>" ></td>
+            <td><%= r.name %></td>
+            <td><%= r.description %></td>
+        </tr>
+        <% }); %>
     </div>
-
     <button><a href="/recipes/newFlex">Add Meal</a></button>
     <button><a href="/diets">Go Back</a></button>
 </body>

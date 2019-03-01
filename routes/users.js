@@ -11,6 +11,8 @@ router.get('/exercises', usersCtrl.showExercises);
 router.post('/info', usersCtrl.addInfo);
 router.put('/info', usersCtrl.updateInfo);
 router.post('/image', usersCtrl.addImage);
+router.get('/beginnerT', usersCtrl.beginnerT);
+router.get('/intermediateT', usersCtrl.intermediateT);
 
 
 function isLoggedIn(req, res, next) {

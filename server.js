@@ -6,13 +6,13 @@ var logger = require('morgan');
 var session = require('express-session');
 var passport = require('passport');
 const methodOverride = require('method-override');
-// var multer = require('multer');
+
 
 
 require('dotenv').config();
 require('./config/database');
 require('./config/passport');
-// require('./config/cloudinary');
+require('./config/cloudinary');
 
 
 var indexRouter = require('./routes/index');

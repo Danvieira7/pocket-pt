@@ -35,7 +35,7 @@ var recipeSchema = new Schema({
     },
     image:{
         type: String,
-        // required: true
+        // required: true  
     },
     dietStyle: {
         type: String,

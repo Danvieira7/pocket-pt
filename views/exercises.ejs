@@ -7,7 +7,7 @@
     <title>Pocket PT</title>
 </head>
 <body>
-    <form action="home">
+    <!-- <form action="home">
         <div>
             <a href="/rTraining">Resistence Training</a>
         </div>
@@ -16,6 +16,14 @@
         </div>
 
         <button type="submit">Go Back</button>
-    </form>
+    </form> -->
+    <% if (user.info.exp == "intermediate") { %>
+        <a href="/intermediateT">Resistense Training</a>
+    <% } %>
+    <% if (user.info.exp == "beginner") { %>
+        <a href="/beginnerT">Resistense Training</a>
+    <% } %>
+
+
 </body>
 </html>
