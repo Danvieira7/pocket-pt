@@ -1,5 +1,5 @@
 # Pocket PT
-by Danillo Vieira for General Assembly Project 2
+By Danillo Vieira for General Assembly Project 2
 Click [here](https://pocket-pt.herokuapp.com/) to try it out!
 
 
@@ -15,7 +15,7 @@ and a whole workout routine, based on your training experience level.
 
 ## Screenshot
 Welcome page
-![Recipebook Welcome Page]( https://i.imgur.com/RJRQLXv.png "Pocket PT Welcome Page")
+![Pocket PT]( https://i.imgur.com/RJRQLXv.png "Pocket PT Welcome Page")
 Info Page
 ![Pocket PT](https://i.imgur.com/CD7Th7u.png "Info page")
 Home page

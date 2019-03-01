@@ -13,15 +13,21 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
+
+    <form action="/recipes/newFlex" method="POST" enctype="multipart/form-data">
+     <div id="navbar">
+        <h1 id="h1">Add Meal</h1>
+        <nav>
+            <button type="submit" class="btn btn-warning">Add Meal</button>
+            <a href="/flexDiet" class="btn btn-warning">Go Back</a>
+        </nav>
+    </div>
     
-   <form action="/recipes/newFlex" method="POST" enctype="multipart/form-data">
         <input type="file" name="image" >
         <input type="hidden" name="dietStyle" value="flexible">
         <input type="text" name="name" placeholder="Meal Name">
         <input type="text" name="description" placeholder="Discription">
-        <button type="submit">Add Meal</button>
     </form>
-    <button><a href="/flexDiet">Go Back</a></button>
 
 
 </body>
