@@ -2,33 +2,41 @@
 <html>
   <head>
     <title><%= title %></title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
   </head>
-  <body>
-    <div class="container" id="bigone">
-      <div class="row">
-          <div class="col-sm-12" id="container">
-          <h1 class="display-3" id="hometitle"><%= title %></h1>
-          <hr class="my-4">
-        
-          <div id="intro">
-            <p>
-            Pocket PT is a Personal Trainer in your pocket. <br>
-            With Pocket PT, you will be able to know the amount of calories <br>
-            you need to eat per day and the amount you need to spend to get to your goal.<br>
-            Pocket PT also gives you suggestions of meals from three different diet styles,<br>
-            and a whole workout routine, based on your training experience level.<br>
-          </p>
-          </div>
-          
-          <p>Use Your google acc to sign in and enjoy the journey to success!!</p>
-          <a href="/auth/google" class="btn btn-outline-warning" >Sign In</a>
-        </div>
-    </div>
+  <body>    
+    <nav class="navbar navbar-expand-md  sticky-top" style="background-color: rgba(22, 22, 22, 0.7)">
+      <div class="collapse navbar-collapse" id="collapse_target">
+        <a class="nav-link" id="logo" href="#"><i class="fas fa-dumbbell"> </i><%= title %></a>
+        <ul class="navbar-nav ml-auto" >
+          <li class="nav-item">
+            <a class="nav-link" href="/auth/google">Sign In</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div id="intro">
+      <div class="introcard">
+        <h1 class="title"><%= title %></h1>
+        <p>
+          Pocket PT is a Personal Trainer in your pocket. <br>
+          With Pocket PT, you will be able to know the amount of calories you <br>
+          need to eat per day and the amount you need to spend to get to your goal.<br>
+          Pocket PT also gives you suggestions of meals from three different diet styles,<br>
+          and a whole workout routine, based on your training experience level.<br>
+        </p>
+      </div>
+      <a href="/auth/google" class="btn btn-warning btn-sm"  ><i class="devicon-google-plain" style="color:red; font-size: 15px"> </i>Sign In with Goolge</a>
+      
+    </div>          
   </body>
 </html>
+      

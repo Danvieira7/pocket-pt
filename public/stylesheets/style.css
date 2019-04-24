@@ -1,19 +1,21 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}
-#h1, h4, h5{
-  font-family: 'Londrina Shadow', cursive;
+  background-image: 
+  linear-gradient(
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)
+  ),
+  url('../images/fitnessdeals_spot1.jpeg');
 }
 
 #hometitle{
-  font-family: 'Londrina Shadow', cursive;
   background-color: rgb(255, 198, 78);
 }
+  
+#h1, h1, h4, h5, p, a{
+  font-family: 'Julius Sans One', sans-serif;
+}
+
 
 
 #exercisecont{
@@ -34,21 +36,6 @@ a {
 
 }
 
-#profilecontainer{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-  background-color: rgb(255, 198, 78);
-  height: 250px;
-}
-
-#profileimg{
-  border-radius: 50%;
-  border: solid black 2px;
-  height: 75px;
-}
 #dietdisplay{
   display: flex;
   flex-direction: row;
@@ -86,13 +73,7 @@ a {
   flex-direction: column;
 }
 
-#intro{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 300px;
-}
+
 #container{
   display: flex;
   flex-direction: column;
@@ -104,4 +85,86 @@ a {
   display: flex;
   justify-content: baseline;
   text-align: center;
+}
+
+
+/*------------INFO-PAGE--------------*/
+
+
+
+
+
+
+/*------------HOME-PAGE--------------*/
+
+#profileimg{
+  border-radius: 50%;
+  border: solid rgb(255, 191, 67) 2px;
+  height: 75px;
+}
+
+#profilecontainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  background-color: rgba(22, 22, 22, 0.6);
+  width: 250px;
+  height: 500px;
+  padding-top:20px; 
+  border-radius: 5px;
+  color: antiquewhite;
+}
+
+#homecontent{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: space-between;
+  margin-top: 10px;
+  margin-left:10px;
+}
+
+.beginertips{
+  background-color: rgba(22, 22, 22, 0.6);
+  height: 500px;
+  border-radius: 5px;
+  color: antiquewhite;
+  font-family: 'Julius Sans One', sans-serif;
+  padding: 10px;
+  margin-right: 300px;
+}
+/*-------------INDEX-PAGE--------------*/
+
+#intro{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.introcard{
+  color: antiquewhite;
+  font-size: 15px;
+}
+
+.title, .nav-link, a, h1, h5{
+  font-family: 'Julius Sans One', sans-serif;
+  color: rgb(255, 191, 67);
+}
+.title{
+  font-size: 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+  
+}
+.nav-link{
+  font-size:20px;
+}
+#logo{
+  font-size: 25px;
+}
+.nav-link:hover, a:hover {
+  color: darkgoldenrod;
 }

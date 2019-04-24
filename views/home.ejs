@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,53 +14,101 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
-
 <body>
-    <div id="homecontainer">
-        <div id="navbar">
-            <h1 id="h1">Home Page</h1>
-            <nav>
-                <a href="/updateinfo" class="btn btn-warning">Update Info</a>
-                <a href="/diets" class="btn btn-warning">Diet</a>
-                <a href="/exercises" class="btn btn-warning">Exercises</a>
-                <a href="/logout" class="btn btn-warning">Log Out</a>
-            </nav>
+    <nav class="navbar navbar-expand-md  sticky-top" style="background-color: rgba(22, 22, 22, 0.7)">
+        <div class="collapse navbar-collapse" id="collapse_target">
+            <a class="nav-link" id="logo" href="#"><i class="fas fa-dumbbell"> </i>Pocket PT</a>          
+            <ul class="navbar-nav ml-auto" >
+                <li class="nav-item btn" >
+                    <a class="nav-link" href="/diets">Diets</a>                    
+                </li>
+                <li class="nav-item btn" >
+                    <a class="nav-link" href="/exercises">Exercises</a>    
+                </li>
+                <li class="nav-item btn" >
+                    <a class="nav-link" href="/logout">Log Out</a>                 
+                </li>
+            </ul>
         </div>
-       
+    </nav>  
+    <div id="homecontent" >    
         <div id="profilecontainer">
             <div id="photoname">
                 <img src="<%=user.image%>" id="profileimg">
+                <br/>
+                <br/>
                 <h5><%= user.name %></h5>
             </div>
-            <div id="#list">
-            
+            <br/>
+            <div id="#list">           
                 <p>
                     <% var inches = user.info.height; %>
                     <% var feet = Math.floor(inches / 12); %>
                     <% inches %= 12; %>
-                    <%= user.info.weight %>lb | <%= user.info.age %> | <%= feet %>'<%= inches %>" 
-                </p>
-                
-            </div>
-                
-            
+                    Age: <%= user.info.age %> <br/>
+                    weight: <%= user.info.weight %>lb <br/>
+                    Height: <%= feet %>'<%= inches %>" 
+                </p>   
+            </div>                
             <div id="calinfo">
                 <p>
-                    Caloric Intake <%= calIntake %>cal | Caloric Output <%= bmr %>cal </br></br>
+                    Caloric Intake: <%= calIntake %> cal <br/> Caloric Output: <%= bmr %> cal </br></br>
                     Macros Caloric Ratio: <br>
-                    Carb: <%= carb %>cal | Prot: <%= prot %>cal | Fats: <%= fat %>cal
+                    Carb: <%= carb %> cal <br/> Prot: <%= prot %> cal <br/> Fats: <%= fat %> cal
                 </p>
             </div>
+            <a href="/updateinfo">Update Info</a>
+        </div>
+        <div id="tips">
+            
+            <% if (user.info.exp == "beginner") { %> 
+                
+                <div class="beginertips">
+                    <h1> Hello <%= user.name %></h1>
+                    <h5>Beginner Tips:</h5>
+                    <p>
+                        <ol>
+                            <li>
+                                As a beginner, it is highly recommended that <br/>
+                                you keep control of your repetitions.<br/>
+                                The results you will get from lifting the wights <br/>
+                                calmly and properly will be more important <br/>
+                                then the amount of weight that you're tying to lift,<br/> 
+                                don't let you ego outshine your goal!<br>
+                            </li>
+                            <br/>
+                            <li>
+                                Make fitness a Habbit. It will be hard at first, <br/>
+                                but following the plan is the best way to keep it simple.<br/>
+                                Your Workout plan consists of a 3 days/week resistance <br/>
+                                trainnig routine, which will allow you to have proper<br/> 
+                                rest between workouts
+                            </li>
+                            <br/>
+                            <li>
+                                Diet like you mean it. The biggest bridge between where <br/>
+                                you are now to your goal, is your eating habits.<br/>
+                                Pocket PT gives you suggetions for 5 meals/day from 3 different <br/>
+                                diet styles, which makes your life much more easy<br/>
+                                Eating the same meals everyday makes you transform your diet <br/>
+                                into a routine, which will give you the consistency you need. 
+                            </li>
+                        </ol>
+                        <br/>
+                        " The pain is the weakness leaving the body. . . "<br/>
+                        Arnold Schwarzenegger.    
+                    </p>
+                </div>
+                <% } %>
+                
+                <% if (user.info.exp == "intermediate") { %>
+                <h5>Intermediate Tips:</h5>
+                <p>
+                    
+                </p>
+            <% } %>
             
         </div>
-
-        <div>
-            
-        </div>
-        <div>
-        </div>
-    
     </div>
 </body>
-
 </html>
