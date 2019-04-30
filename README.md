@@ -1,42 +1,54 @@
-# The Ink Challenge
-By Demetrious Robinson, Sun Park and Danillo Vieira for General Assembly Project 3
-Click [here](http://inkchallenger.herokuapp.com/) to try it out!
+# Pocket PT
+by Danillo Vieira for General Assembly Project 2
+Click [here](https://pocket-pt.herokuapp.com/) to try it out!
 
 
 
 
 ## Description
-PRV first devised the idea of the Ink Challenger one sunshine-y Tuesday afternoon. The idea was to introduce talented, reliable and experienced tattoo artists to tattoo novices and the experienced alike. Tattoo artists from all over the country contribute their tattoo art into the Ink Challenger's tattoo database which randomly generates a drawing and challenges the user to ink on the tattoo. Regardless of the distance, all of our tattoo parlors and artists are artistically and technically skilled. Sign up for the challenge and find out what your randomized tattoo will be and schedule an appointment with the artist of your choice. Schedule the appointment for the day and time you are available. Thanks for taking the challenge and we hope you enjoy the new tattoo for all of time!
+Pocket PT is a Personal Trainer in your pocket. 
+With Pocket PT, you will be able to know the amount of calories 
+you need to eat per day and the amount you need to spend to get to your goal.
+Pocket PT also gives you suggestions of meals from three different diet styles,
+and a whole workout routine, based on your training experience level.
+
 
 ## Screenshot
-Welcome/Home Page
-![The Ink Challenge](https://i.imgur.com/EtRVCmb.png "The Ink Challenge Home Pafe")
-Sign Up Page
-![The Ink Challenge](https://i.imgur.com/HM9qfDt.png "Sign Up page")
-Home Page
-![The Ink Challenge](https://i.imgur.com/kmNKQsC.png "Home Page")
-Tattoo Page
-![The Ink Challenge](https://i.imgur.com/dK8CoiD.png "Tattoo Page")
-Random Tattoo generator Page
-![The Ink Challenge](https://i.imgur.com/eFfwhY7.png "Recommended")
-Appointment Page
-![The Ink Challenge](https://i.imgur.com/NwoUUY2.png "Appointment Page")
-Artists Page
-![The Ink Challenge](https://i.imgur.com/4E9jp8g.png "Artists page")
-
-
+Welcome page
+![Recipebook Welcome Page]( https://i.imgur.com/bK8yLRX.png "Pocket PT Welcome Page")
+Info Page
+![Pocket PT](https://i.imgur.com/3srTc3v.png "Info page")
+Home page
+![Pocket PT](https://i.imgur.com/WPZLM2h.png "Home")
+Diet Page
+![Pocket PT](https://i.imgur.com/Yg7S6Xw.png "Diet")
+Recommended Exercise Page
+![Pocket PT](https://i.imgur.com/wTl9ZTp.png "Recommended")
+Workout Sheet
+![Pocket PT](https://i.imgur.com/N5CsfZ5.png "Trainning")
 
 
 ## Technologies Used
 * HTML5
 * CSS3
 * JavaScript
-* Django
-* Python
-* postgresql
-* AmozonS3
-* Github
+* ejs
+* Node.js
+* Mongoose
+* MongoDB
+* Express.js
+* Mongo ATLAS
 * Heroku
 * oAuth
-* Trello - click [here](https://trello.com/b/595tEhne/the-ink-challenger) for Trello planning/mapping board
+* RESTful APIs
+* Trello - click [here](https://trello.com/b/dWkNiL1t/project-2-pocket-pt) for Trello planning/mapping board
 
+
+## Getting Started
+Please visit  to try out my app!
+
+
+## Next Steps
+* Add responsive design for optimal viewing on mobile.
+* Add personalized portions ratio for user.
+* Add Workout interaction.
