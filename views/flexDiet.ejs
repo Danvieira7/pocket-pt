@@ -13,15 +13,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
-
-
-    <div id="navbar">
-            <h1 id="h1">Flexible Diet Recipes</h1>
-            <nav>
-                <a href="/recipes/newFlex" class="btn btn-warning">Add Meal</a>
-                <a href="/diets" class="btn btn-warning">Go Back</a>
-            </nav>
-        </div><br><br><br><br>
+    <nav class="navbar navbar-expand-md  sticky-top" style="background-color: rgba(22, 22, 22, 0.7)">
+        <div class="collapse navbar-collapse" id="collapse_target">
+            <a class="nav-link" id="logo" href="/home"><i class="fas fa-dumbbell"> </i>Pocket PT</a>          
+            <ul class="navbar-nav ml-auto" >
+                <li class="nav-item btn" >
+                    <a class="nav-link" href="/exercises">Go Back</a>                 
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
     <div id="dietdisplay">
         <% recipe.forEach(function(r) { %>
         <div id="recipebox" class="container">
@@ -30,12 +32,10 @@
                 <img src="<%= r.image %>" id="foodimg">
                 <h4><%= r.name %></h4>
                 <p>
-                    description: 
-                    <div id="discrip">
-                        <%= r.description %>
-                    </div>
+                    description:
+                    <%= r.description %>
                 </p>
-                <button type="submit" class="btn btn-danger btn-block">x</button>
+                <button type="submit" class="btn btn-danger btn-sm">x</button>
             </form>
         </div>
         <% }); %>

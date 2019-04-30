@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,28 +16,27 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
-    
-    
-    <form action="home">
-        
-        <div id="navbar">
-            <h1 id="h1">Diet</h1>
-            <nav>
-                <button type="submit" class="btn btn-warning">Go Back</button>
-            </nav>
-        </div><br><br><br><br>
-        
-        <div id="dietbody">
-            <div id="box1">
-                <a href="/flexDiet" class="btn btn-warning btn-lg btn-block">Flexible Diet</a>  
-            </div> <br>
-            <div id="box2">
-                <a href="/keto" class="btn btn-warning btn-lg btn-block">Keto</a>   
-            </div><br>
-            <div id="box3">
-                <a href="/paleo" class="btn btn-warning btn-lg btn-block">Paleo</a>
-            </div>
+    <nav class="navbar navbar-expand-md  sticky-top" style="background-color: rgba(22, 22, 22, 0.7)">
+        <div class="collapse navbar-collapse" id="collapse_target">
+            <a class="nav-link" id="logo" href="/home"><i class="fas fa-dumbbell"> </i>Pocket PT</a>          
+            <ul class="navbar-nav ml-auto" >
+                <li class="nav-item btn" >
+                    <a class="nav-link" href="/home">Go Back</a>                 
+                </li>
+            </ul>
         </div>
-    </form>
+    </nav> 
+    <div class="dietpagecont">
+        <div id="dietbody">
+            <h1>Diets</h1>
+            <br/>
+            <br/>
+            <a href="/flexDiet" class="btn btn-outline-warning btn-md btn-block">Flexible Diet</a>  
+            <br/>
+            <a href="/keto" class="btn btn-outline-warning btn-md btn-block">Keto</a>   
+            <br/>
+            <a href="/paleo" class="btn btn-outline-warning btn-md btn-block">Paleo</a>
+        </div>
+    </div>   
 </body>
 </html>
