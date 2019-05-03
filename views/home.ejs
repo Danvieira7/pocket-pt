@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pocket PT</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <head>
+        <title>Pocket PT</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-md  sticky-top" style="background-color: rgba(22, 22, 22, 0.7)">
@@ -35,68 +33,87 @@
         <div id="profilecontainer">
             <div id="photoname">
                 <img src="<%=user.image%>" id="profileimg">
-                <br/>
-                <br/>
                 <h5><%= user.name %></h5>
             </div>
-            <br/>
-            <div id="#list">           
-                <p>
-                    <% var inches = user.info.height; %>
-                    <% var feet = Math.floor(inches / 12); %>
-                    <% inches %= 12; %>
-                    Age: <%= user.info.age %> <br/>
-                    weight: <%= user.info.weight %>lb <br/>
+
+            <div id="list">              
+                <% var inches = user.info.height; %>
+                <% var feet = Math.floor(inches / 12); %>
+                <% inches %= 12; %>
+                <p class="data">
+                    Age: <%= user.info.age %> 
+                </p>
+                <p class="data">
+                    weight: <%= user.info.weight %>lb 
+                </p>
+                <p class="data">
                     Height: <%= feet %>'<%= inches %>" 
-                </p>   
-            </div>                
+                </p>    
+            </div>  
+
             <div id="calinfo">
                 <p>
-                    Caloric Intake: <%= calIntake %> cal <br/> Caloric Output: <%= bmr %> cal </br></br>
-                    Macros Caloric Ratio: <br>
-                    Carb: <%= carb %> cal <br/> Prot: <%= prot %> cal <br/> Fats: <%= fat %> cal
+                    <p>
+                        Caloric Intake: <%= calIntake %> cal  
+                    </p>
+                    <p>
+                        Caloric Output: <%= bmr %> cal 
+                    </p>
+                
                 </p>
             </div>
+            <div>
+                Macros Caloric Ratio: <br/>
+                Carb: <%= carb %> cal  
+                Prot: <%= prot %> cal 
+                Fats: <%= fat %> cal
+            </div>
+            <br/>
             <a href="/updateinfo">Update Info</a>
         </div>
-        <div id="tips">
-            
+        <div class="tips">          
             <% if (user.info.exp == "beginner") { %> 
                 
-                <div class="beginertips">
-                    <h1> Hello <%= user.name %></h1>
-                    <h5>Beginner Tips:</h5>
-                    <p>
-                        <ol>
-                            <li>
-                                As a beginner, it is highly recommended that <br/>
-                                you keep control of your repetitions.<br/>
-                                The results you will get from lifting the wights <br/>
-                                calmly and properly will be more important <br/>
-                                than the amount of weight that you're tying to lift,<br/> 
-                                don't let your ego outshine your goal!<br>
-                            </li>
-                            <br/>
-                            <li>
-                                Make fitness a Habit. It will be hard at first, <br/>
-                                but following the plan is the best way to keep it simple.<br/>
-                                Your Workout plan consists of a 3 day/week resistance <br/>
-                                trainnig routine, which will allow you to have proper<br/> 
-                                rest between workouts.
-                            </li>
-                            <br/>
-                            <li>
-                                Diet like you mean it. The biggest bridge between where <br/>
-                                you are now and your goal, is your eating habits.<br/>
-                                Pocket PT gives you suggetions for 5 meals/day from 3 different <br/>
-                                diet styles, which will make your life much easier<br/>
-                                Eating the same meals everyday makes you transform your diet <br/>
-                                into a routine, giving you the consistency you need. 
-                            </li>
-                        </ol>
-                        <br/>
+                <h1> Hello <%= user.name %></h1>
+                <h5>Beginner Tips:</h5>
+                <div class="beginertips">              
+                    <div class="tip">
+                        <p>
+                            As a beginner, it is highly recommended that 
+                            you keep control of your repetitions.
+                            The results you will get from lifting the wights 
+                            calmly and properly will be more important 
+                            than the amount of weight that you're tying to lift, 
+                            don't let your ego outshine your goal!
+                        </p>
+                    </div>  
+
+                    <div class="tip">
+                        <p>
+                            Make fitness a Habit. It will be hard at first, 
+                            but following the plan is the best way to keep it simple.
+                            Your Workout plan consists of a 3 day/week resistance 
+                            trainnig routine, which will allow you to have proper 
+                            rest between workouts.
+                        </p>
+                    </div>
+
+                    <div class="tip">
+                        <p>
+                            Diet like you mean it. The biggest bridge between where 
+                            you are now and your goal, is your eating habits.
+                            Pocket PT gives you suggetions for 5 meals/day from 3 different 
+                            diet styles, which will make your life much easier
+                            Eating the same meals everyday makes you transform your diet 
+                            into a routine, giving you the consistency you need. 
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <p>    
                         " Pain is the weakness leaving the body. . . "<br/>
-                          Arnold Schwarzenegger.    
+                        Arnold Schwarzenegger.    
                     </p>
                 </div>
                 <% } %>
