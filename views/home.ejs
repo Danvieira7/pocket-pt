@@ -33,7 +33,7 @@
         <div id="profilecontainer">
             <div id="photoname">
                 <img src="<%=user.image%>" id="profileimg">
-                <h5><%= user.name %></h5>
+                <h5 id="name"><%= user.name %></h5>
             </div>
 
             <div id="list">              
@@ -63,10 +63,12 @@
                 </p>
             </div>
             <div>
-                Macros Caloric Ratio: <br/>
-                Carb: <%= carb %> cal  
-                Prot: <%= prot %> cal 
-                Fats: <%= fat %> cal
+                <p>
+                    Macros Caloric Ratio: <br/>
+                    Carb: <%= carb %> cal  
+                    Prot: <%= prot %> cal 
+                    Fats: <%= fat %> cal
+                </p>
             </div>
             <br/>
             <a href="/updateinfo">Update Info</a>
