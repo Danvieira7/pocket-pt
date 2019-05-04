@@ -279,15 +279,6 @@ body {
     width:100%;
     background-repeat: no-repeat;
     background-size: 130%; 
-  
-  }
-  
-  .nav-link{
-    font-size:30px;
-  }
-  
-  #logo{
-    font-size: 45px;
   }
  
   .exercisecont{
@@ -323,7 +314,7 @@ body {
     color: antiquewhite;
     max-width: 1000px;
     width: 100%;
-    height: 30%;
+    height: 35%;
     padding: 20px; 
     border-radius: 5px;
     margin: 10px;   
@@ -335,27 +326,27 @@ body {
   }
   
   .tips{
-    height: 70%;
+    height: 65%;
     max-width: 1000px;
     width: 100%;
     text-align: center;
   }
   #profilecontainer p{
-    font-size: 25px;
+    font-size: 12px;
   }
 
-  #name{
+  /* #name{
     font-size: 40px;
-  }
+  } */
   
   .tip{
     width: 100%;
     text-align: justify;
     padding: 10px;
   }
-  .tip p {
+  /* .tip p {
     font-size: 20px;
-  }
+  } */
   
   .data{
     padding-left: 10px;
