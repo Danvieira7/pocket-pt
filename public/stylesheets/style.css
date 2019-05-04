@@ -266,7 +266,21 @@ body {
 }
 /*------------------RESPONSIVENESS--------------------*/
 @media screen and (max-width: 900px){
-
+  
+  body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+      ),
+      url('../images/78344-11605706.jpg');
+    height: 100%;
+    width:100%;
+    background-repeat: no-repeat;
+    background-size: 130%; 
+  
+  }
   
   .nav-link{
     font-size:30px;
@@ -290,20 +304,6 @@ body {
     width: 100%;
   }
 
-  body {
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background-image: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.3)
-      ),
-      url('../images/78344-11605706.jpg');
-    height: 100%;
-    width:100%;
-    background-repeat: no-repeat;
-    background-size: 130%; 
-
-  }
     
   #homecontent{
     display: flex;
