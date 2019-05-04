@@ -17,16 +17,23 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-md  sticky-top" style="background-color: rgba(22, 22, 22, 0.7)">
-        <div class="collapse navbar-collapse" id="collapse_target">
+
+        <spam class="navbar-text">
             <a class="nav-link" id="logo" href="/home"><i class="fas fa-dumbbell"> </i>Pocket PT</a>          
+        </spam>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+            <!-- <span class="navbar-toggler-icon"></span> -->
+            <i class="fas fa-bars" style="color: goldenrod; font-size:20px;"></i>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="collapse_target">
             <ul class="navbar-nav ml-auto" >
-                <li class="nav-item btn" >
-                    <a class="nav-link" href="/home">Go Back</a>                 
+                <li class="nav-item">
+                    <a class="nav-link" href="/home">Go Back</a>                     
                 </li>
             </ul>
         </div>
     </nav>
-
     <div class="dietpagecont">
         <div id="dietbody">
             <h1>Exercises</h1>

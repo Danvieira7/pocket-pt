@@ -277,8 +277,9 @@ body {
       url('../images/78344-11605706.jpg');
     height: 100%;
     width:100%;
-    background-repeat: no-repeat;
+    background-color: blanchedalmond;
     background-size: 130%; 
+    overflow-y: hidden;
   }
  
   .exercisecont{
@@ -299,9 +300,8 @@ body {
   #homecontent{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-content: space-between;
-    margin: 10px;
+    justify-content: space-around;
+    align-items: center;
     height: 100vh;
   }
     
@@ -314,10 +314,11 @@ body {
     color: antiquewhite;
     max-width: 1000px;
     width: 100%;
-    height: 35%;
+    height: 40%;
     padding: 20px; 
     border-radius: 5px;
-    margin: 10px;   
+    margin: 10px;
+    margin-top: 0px;   
   }
   
   .beginertips{
@@ -326,10 +327,11 @@ body {
   }
   
   .tips{
-    height: 65%;
+    height: 60%;
     max-width: 1000px;
     width: 100%;
     text-align: center;
+    overflow-y: scroll;
   }
   #profilecontainer p{
     font-size: 12px;
@@ -351,10 +353,15 @@ body {
   .data{
     padding-left: 10px;
   }
+
+  #calinfo p {
+    margin: 0%;
+  }
   
   #list, #calinfo{
     display: flex;
     flex-direction: row; 
     justify-content: center; 
+
   }
 }
