@@ -6,11 +6,7 @@ Click [here](https://pocket-pt.herokuapp.com/) to try it out!
 
 
 ## Description
-Pocket PT is a Personal Trainer in your pocket. 
-With Pocket PT, you will be able to know the amount of calories 
-you need to eat per day and the amount you need to spend to get to your goal.
-Pocket PT also gives you suggestions of meals from three different diet styles,
-and a whole workout routine, based on your training experience level.
+PocketPT is a prototype that will eventually substitute my physical presence as a Certified Personal Trainer with all of the same useful information that I would typically give my clients. Although I ultimately decided to change my career, I still wanted a way to help my clients achieve their fitness goals. I developed PocketPT to provide users with exercise and nutrition tips that are tailored to their goals and personal needs. To build the app, I used Express, Node.js, MongoDB, EJS, CSS3 and Bootstrap.
 
 
 ## Screenshot
