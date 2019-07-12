@@ -104,7 +104,6 @@ function viewInfo(req, res, next){
 function updateInfo(req, res, next){
   var email = req.user.email
   var information = req.user.info
-
   
   User.findOneAndUpdate({email: email}, {$set:{info:
     req.body
